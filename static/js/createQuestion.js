@@ -117,7 +117,7 @@ $(document).ready(function(){
         }
     });
     $('#make-btn').click(function () {
-        var api_key = "{{ api_key }}";
+        var api_key = self.pkc.apiKey;
         var group_name = $('#group_name').val();
         var questions = {};
         var answers = {};

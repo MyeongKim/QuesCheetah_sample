@@ -16,6 +16,7 @@ PKC.prototype.createMultipleQuestion = function (params, success, error) {
 
 PKC.prototype.createSingleQuestion = function (params, success, error) {
     var url = this.baseUrl+'single/create';
+    console.log(params);
     this.doPost(url, params, success, error)
 };
 

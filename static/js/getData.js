@@ -7,11 +7,6 @@ $(document).ready(function(){
            'api_key': self.pkc.apiKey,
            'question_title': question_title
        };
-
-       var success = function(data){
-           data = JSON.stringify(data);
-            $('#resultDiv').text(data);
-       };
        self.pkc.getQuestion(param, function(data){
            data = JSON.stringify(data);
            $('#questionResult').text(data);

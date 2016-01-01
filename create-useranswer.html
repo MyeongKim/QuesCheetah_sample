@@ -14,19 +14,31 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">
-                    하하
+                    title : test question
+                    테스트용 질문입니다.
                 </h3>
             </div>
             <div class="panel-body">
-                {% for a in answers|dictsort:"answer_num" %}
                 <div>
-                    <button class="btn btn-primary answerBtn" type="button" a_num="{{ a.answer_num }}" q_id="{{ question_id }}">
-                        {{ a.answer_text }}<span class="badge">{{ a.answer_count }}</span>
+                    <button class="btn btn-primary answerBtn" type="button" a_num="1" q_id="100">
+                        보기1<span class="badge"></span>
+                    </button>
+                    <button class="btn btn-primary answerBtn" type="button" a_num="2" q_id="100">
+                        보기2<span class="badge"></span>
+                    </button>
+                    <button class="btn btn-primary answerBtn" type="button" a_num="3" q_id="100">
+                        보기3<span class="badge"></span>
+                    </button>
+                    <button class="btn btn-primary answerBtn" type="button" a_num="4" q_id="100">
+                        보기4<span class="badge"></span>
                     </button>
                 </div>
-                {% endfor %}
             </div>
         </div>
+    </div>
+    <div class="col-sm-6">
+        <div> 결과 윈도우 </div>
+        <div class="resultDiv"></div>
     </div>
 </div>
 <script src="static/jquery/jquery-2.1.4.min.js"></script>
