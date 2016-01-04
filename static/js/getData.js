@@ -4,7 +4,7 @@ $(document).ready(function(){
        var api_key = $('#apikeyInput').val();
        var question_title = $('#questionTitleInput').val();
        var param = {
-           'api_key': self.pkc.apiKey,
+           'api_key': api_key ? api_key: self.pkc.apiKey,
            'question_title': question_title
        };
        self.pkc.getQuestion(param, function(data){
