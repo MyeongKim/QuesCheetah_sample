@@ -5,40 +5,160 @@
     <title>create-useranswer-sample</title>
     <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/common.css">
+    <style>
+        .panel-body{
+            text-align: center;
+        }
+        .answerBtn{
+            width: 45%;
+        }
+    </style>
 </head>
 <body>
-<h3>You can vote here. create useranswer</h3>
-<div id="helper-msg"></div>
-<div class="row">
-    <div class="col-sm-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    title : test question
-                    테스트용 질문입니다.
-                </h3>
-            </div>
-            <div class="panel-body">
-                <div>
-                    <button class="btn btn-primary answerBtn" type="button" a_num="1" q_id="100">
-                        보기1<span class="badge"></span>
-                    </button>
-                    <button class="btn btn-primary answerBtn" type="button" a_num="2" q_id="100">
-                        보기2<span class="badge"></span>
-                    </button>
-                    <button class="btn btn-primary answerBtn" type="button" a_num="3" q_id="100">
-                        보기3<span class="badge"></span>
-                    </button>
-                    <button class="btn btn-primary answerBtn" type="button" a_num="4" q_id="100">
-                        보기4<span class="badge"></span>
-                    </button>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">QuesCheetah</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="./create-question.html">create-question</a></li>
+                <li class="active"><a href="./create-useranswer.html">create-useranswer</a></li>
+                <li><a href="./get-data.html">get-data</a></li>
+                <li><a href="./delete-data.html">delete-data</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <div class="info-msg">
+        <h1>You can vote here. Create useranswer</h1>
+    </div>
+    <div id="helper-msg"></div>
+    <div class="row content">
+        <div class="col-sm-4 col-sm-offset-4">
+            <div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active" q_id="107"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Q1</a></li>
+                    <li role="presentation" q_id="108"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Q2</a></li>
+                    <li role="presentation" q_id="109"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Q3</a></li>
+                    <li role="presentation" q_id="110"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Q4</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">당신의 성별은 무엇입니까?</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="1" q_id="107">
+                                        남성 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="2" q_id="107">
+                                        여성 <span class="badge"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">좋아하는 동물은 무엇입니까?</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="1" q_id="108">
+                                        토끼 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="2" q_id="108">
+                                        거북이 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="3" q_id="108">
+                                        강아지 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="4" q_id="108">
+                                        고양이 <span class="badge"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">가장 좋아하는 색은?</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="1" q_id="109">
+                                        분홍색 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="2" q_id="109">
+                                        흰색 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="3" q_id="109">
+                                        파란색 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="4" q_id="109">
+                                        노란색 <span class="badge"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">가장 먹고싶은 것은?</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="1" q_id="110">
+                                        카레 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="2" q_id="110">
+                                        고기 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="3" q_id="110">
+                                        케이크 <span class="badge"></span>
+                                    </button>
+                                    <button class="btn btn-default answerBtn" type="button" a_num="4" q_id="110">
+                                        치킨 <span class="badge"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-6">
-        <div> 결과 윈도우 </div>
-        <div class="resultDiv"></div>
+        <button type="button" class="modal-btn" data-toggle="modal" data-target="#resultModal" hidden>
+            resultModal
+        </button>
+        <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Response</h4>
+                    </div>
+                    <div class="modal-body">
+                        Thank you for answering!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <script src="static/jquery/jquery-2.1.4.min.js"></script>

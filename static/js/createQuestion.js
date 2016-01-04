@@ -134,7 +134,15 @@ $(document).ready(function(){
                     'questions': questions,
                     'answers': answers,
                 };
-                self.pkc.createMultipleQuestion(params);
+                self.pkc.createMultipleQuestion(params, function(data){
+                    var oriData = JSON.stringify(data);
+                    var questionData = JSON.stringify(data['question']);
+                    var answerData = JSON.stringify(data['answers']);
+                    $('.modal-body .question').text(questionData);
+                    $('.modal-body .answers').text(answerData);
+                    $('#resultModal').modal('show');
+                    console.log(oriData);
+                });
                 return false;
             }(); i++) {
                 var question_title = $('#question_' + i + ' input[name="question_title"]').val();

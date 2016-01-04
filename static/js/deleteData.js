@@ -7,24 +7,29 @@ $(document).ready(function(){
             'api_key': api_key ? api_key : self.pkc.apiKey,
             'question_title': question_title
         };
-        self.pkc.getQuestion(param, function(data){
-            data = JSON.stringify(data);
-            $('#questionResult').text(data);
-        });
-        self.pkc.getAnswer(param, function(data){
-            data = JSON.stringify(data);
-            $('#answerResult').text(data);
+        self.pkc.getQuestion(param, function(q_data){
+            q_data = JSON.stringify(q_data);
+            $('.modal-body .question').text(q_data);
+            self.pkc.getAnswer(param, function(a_data){
+                a_data = JSON.stringify(a_data);
+                $('.modal-body .answers').text(a_data);
+                $('#resultModal1').modal('show');
+            });
         });
 
+        $('#getDataSubmitBtn').hide();
         $('#deleteBtn').show();
     });
 
-    $('#deleteBtn').click(function(){
+    $('#deleteBtn').click(function(e){
+        e.preventDefault();
         var param = {
             'api_key': self.pkc.apiKey,
             'question_title': $('#questionTitleInput').val()
         };
+
         self.pkc.deleteQuestionSet(param, function(data){
+            $('#resultModal2').modal('show');
             data = JSON.stringify(data);
             console.log(data);
         });
