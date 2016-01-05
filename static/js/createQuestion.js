@@ -117,7 +117,7 @@ $(document).ready(function(){
         }
     });
     $('#make-btn').click(function () {
-        var api_key = self.pkc.apiKey;
+        var api_key = self.qc.apiKey;
         var group_name = $('#group_name').val();
         var questions = {};
         var answers = {};
@@ -134,7 +134,7 @@ $(document).ready(function(){
                     'questions': questions,
                     'answers': answers,
                 };
-                self.pkc.createMultipleQuestion(params, function(data){
+                self.qc.createMultipleQuestion(params, function(data){
                     var oriData = JSON.stringify(data);
                     var questionData = JSON.stringify(data['question']);
                     var answerData = JSON.stringify(data['answers']);

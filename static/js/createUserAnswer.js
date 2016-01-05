@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-    //self.pkc.getQuestion(param, function (data) {
+    //self.qc.getQuestion(param, function (data) {
     //    data = JSON.stringify(data);
     //    console.log(data);
     //});
@@ -9,10 +9,10 @@ $(document).ready(function() {
     var q_id_list = [107,108,109,110];
     q_id_list.forEach(function(ele){
         var param = {
-            'api_key': self.pkc.apiKey,
+            'api_key': self.qc.apiKey,
             'question_id': ele
         };
-        self.pkc.getAnswer(param, function (json_data) {
+        self.qc.getAnswer(param, function (json_data) {
             data = JSON.stringify(json_data);
             console.log(data);
             $.each(json_data['answers'], function(index, element){
@@ -33,7 +33,7 @@ $(document).ready(function() {
         var question_id = $(this).attr('q_id');
         var unique_user = unique_set();
         var params = {
-            'api_key': self.pkc.apiKey,
+            'api_key': self.qc.apiKey,
             'question_title': question_title,
             'question_id': question_id,
             'update_num': update_num,
@@ -41,7 +41,7 @@ $(document).ready(function() {
         };
 
         // todo update making answer JavaScript Logic later
-        self.pkc.createUserAnswer(params, function(){
+        self.qc.createUserAnswer(params, function(){
             $('.nav-tabs li[q_id="'+question_id+'"] a').html('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>');
             if(question_id == "110"){
                 $('#resultModal').modal('show');
