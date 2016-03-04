@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuesCheetah sample page</title>
+    <!-- Get bootstrap css file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- css for sample qc window -->
+    <link rel="stylesheet" href="sample.css">
+    <!-- Get jQuery JavaScript file -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <!-- Get bootstrap JavaScript file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- QuesChetah JavaScript SDK file -->
+    <script src="quescheetah-sdk-0.1.0.js"></script>
+</head>
+<body>
+    <h3>Check our sample vote page.</h3>
+    <!-- Wrapper div to fill our vote sample -->
+    <div id="systemjs-sample" qid="1"></div>
+    <!-- Use sample template and init sdk file -->
+    <script type="text/javascript">
+        $.get('sample.html', function(sample_text) {
+            $('#systemjs-sample').html(sample_text);
+        });
+
+        var config = {
+            // This api key is only for sample page.
+            // You can create your own key in QuesCheetah site.
+            // Please replace this with yours when you use this at your site.
+            'apiKey': '4ae1772ba6c8439a8249901cdeffa7fe10900595',
+            'callBackUrl': 'http://127.0.0.1:8000',
+            'receiveRealtimeResponse': false
+        };
+
+        var qc = new QuesCheetah(config);
+    </script>
+    <!-- Load sample JavaScript file -->
+    <script src="sample.js"></script>
+    </body>
+</body>
+</html>
