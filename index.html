@@ -6,7 +6,7 @@
     <!-- Get bootstrap css file -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- css for sample qc window -->
-    <link rel="stylesheet" href="sample.css">
+    <!--<link rel="stylesheet" href="sample.css">-->
     <!-- Get jQuery JavaScript file -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <!-- Get bootstrap JavaScript file -->
@@ -20,9 +20,9 @@
     <div id="systemjs-sample" qid="1"></div>
     <!-- Use sample template and init sdk file -->
     <script type="text/javascript">
-        $.get('sample.html', function(sample_text) {
-            $('#systemjs-sample').html(sample_text);
-        });
+//        $.get('sample.html', function(sample_text) {
+//            $('#systemjs-sample').html(sample_text);
+//        });
 
         var config = {
             // This api key is only for sample page.
@@ -36,7 +36,8 @@
         var qc = new QuesCheetah(config);
     </script>
     <!-- Load sample JavaScript file -->
-    <script src="sample.js"></script>
+    <!--<script src="sample.js"></script>-->
+    <script src="bundletest.js"></script>
     </body>
 </body>
 </html>
