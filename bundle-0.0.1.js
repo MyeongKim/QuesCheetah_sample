@@ -14178,7 +14178,7 @@ $__System.registerDynamic("10", [], false, function(__require, __exports, __modu
     var socket = this["socket"];
     function QuesCheetah(config) {
       this.apiKey = config.apiKey;
-      this.baseUrl = "http://127.0.0.1:8000/v1/";
+      this.baseUrl = "http://www.quescheetah.com/v1/";
       this.callBackUrl = config.callBackUrl;
       this.receiveRealtimeResponse = config.receiveRealtimeResponse;
       if (this.receiveRealtimeResponse) {
@@ -14299,7 +14299,7 @@ $__System.register('7', ['10'], function (_export) {
         setters: [function (_) {}],
         execute: function () {
             config = {
-                'apiKey': '4ae1772ba6c8439a8249901cdeffa7fe10900595',
+                'apiKey': 'your-api-key',
                 'callBackUrl': 'http://localhost:8000',
                 'receiveRealtimeResponse': false
             };
